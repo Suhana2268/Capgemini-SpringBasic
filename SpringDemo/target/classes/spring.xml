@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+		
+		<bean id = "stud1" class = "com.capg.spr.beans.Student">
+		<constructor-arg value = "101" name = "stuId"></constructor-arg>
+		<constructor-arg value = "Sam" name = "stuName"></constructor-arg>
+		<constructor-arg value = "4" name = "year"></constructor-arg>
+		<constructor-arg ref ="course" name = "course"></constructor-arg>
+		</bean>
+		
+		<bean id = "stud2" class = "com.capg.spr.beans.Student">
+		<property name="stuId" value="102"></property>
+		<property name="stuName" value="Maya"></property>
+		<property name="year" value="3"></property>
+		<property name="course" ref="course"></property>
+		</bean>
+		
+		<bean id = "course" class = "com.capg.spr.beans.Courses">
+		<property name="courseId" value="JV"></property>
+		<property name="courseName" value="Java"></property>
+		
+		</bean>
+
+
+
+
+</beans>
